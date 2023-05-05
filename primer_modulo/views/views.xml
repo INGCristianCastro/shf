@@ -1,0 +1,40 @@
+<odoo>
+    <record model="ir.ui.view" id="view_modulo_registro_list">
+        <field name="name">view.modulo.registro.list</field>
+        <field name="model">modulo.registro</field>
+        <field name="priory" eval="16"/>
+        <field name="arch" type="xml">
+            <tree string="list">
+                <field name="name"/>
+                <!--                   <field name="inventor_id"/>-->
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_modulo_registro_form">
+        <field name="name">view.modulo.registro.form</field>
+        <field name="model">modulo.registro</field>
+        <field name="priory" eval="16"/>
+        <field name="arch" type="xml">
+            <form string="Form">
+                <header></header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <!--                                 <field name="inventor_id"/>-->
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_modulo_registro">
+        <field name="name">modulo</field>
+        <field name="res_model">modulo.registro</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_modulo_registro" parent="menu_root" name="Ideas" sequence="10"
+              action="action_list_ideas"/>
+</odoo>
